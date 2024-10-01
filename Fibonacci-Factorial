@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,ch;
+    cout<<"Enter 1 for Fibonacci Series "<<endl;;
+    cout<<"Enter 2 for Factorial number" <<endl;
+    cout<<"Enter your choice:" <<endl;
+    cin>>ch;
+    cout<<"Enter the Positive number:" <<endl;
+    cin>>n;
+    switch(ch)
+    {
+        case 1:
+        int n1,n2,n3;
+        n1=0;
+        n2=1;
+        if((n==0) || (n==1))
+        {
+        cout<<"Fibonacci Series= 0"<<endl;
+        }
+        else if(n==2)
+        {
+          cout<<"Fibonacci Series= 0,1"<<endl;  
+        }
+        else 
+        {
+         cout<<"Fibonacci Series= 0,1"; 
+           for(int i=2;i<n;i++)
+           {
+               n3=n1+n2;
+               n1=n2;
+              n2=n3;
+              cout<<","<<n3;
+           }
+        }
+        break;
+        case 2:
+        int fact;
+        fact=1;
+        
+        if((n==0) || (n==1))
+        {
+        cout<<"Factorial is=1"<<endl;
+        }
+        else
+        {
+        for(int i=1;i<=n;i++)
+        {
+            fact=fact*i;
+        }
+            cout<<"Factorial value is "<<fact;
+        
+        }
+        break;
+        default:
+        cout<<"Invalid Choice"<<endl;
+    }
+}
